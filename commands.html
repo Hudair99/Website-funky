@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete list of Funky Bot commands including music, filters, playlists, and more.">
+    <title>Funky Bot - Commands</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1382989662045474860/1426293467201536052/1000075928-removebg-preview.png">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <img src="https://cdn.discordapp.com/attachments/1382989662045474860/1426293467201536052/1000075928-removebg-preview.png" alt="Funky Bot Logo" class="preloader-logo">
+            <div class="preloader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://cdn.discordapp.com/attachments/1382989662045474860/1426293467201536052/1000075928-removebg-preview.png" alt="Funky Bot">
+                <span>Funky Bot</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="commands.html" class="nav-link active">Commands</a></li>
+                <li><a href="features.html" class="nav-link">Features</a></li>
+                <li><a href="support.html" class="nav-link">Support</a></li>
+                <li><a href="developers.html" class="nav-link">Developers</a></li>
+                <li><a href="vote.html" class="nav-link">Vote</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="https://discord.com/oauth2/authorize?client_id=1281872745113587752&permissions=1165626332499793&response_type=code&redirect_uri=https%3A%2F%2Fdiscord.gg%2FDqmJFqdWXy&integration_type=0&scope=bot+applications.commands+guilds.join" class="btn-primary" target="_blank">Add Bot</a>
+                <a href="https://discord.gg/DqmJFqdWXy" class="btn-outline" target="_blank">Join Support</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Commands Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Complete Command List</h1>
+            <p class="prefix-note">Bot prefix is <code>+</code></p>
+            <div class="search-container">
+                <input type="text" id="commandSearch" placeholder="Search commands..." class="search-input">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="music">Music 🎵</button>
+                <button class="filter-btn" data-category="filters">Filters 🎛️</button>
+                <button class="filter-btn" data-category="playlist">Playlist 📋</button>
+                <button class="filter-btn" data-category="config">Config ⚙️</button>
+                <button class="filter-btn" data-category="fun">Fun 🎉</button>
+                <button class="filter-btn" data-category="info">Info ℹ️</button>
+                <button class="filter-btn" data-category="spotify">Spotify 🎧</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commands Content -->
+    <section class="commands-section">
+        <div class="container">
+            <!-- Music Commands -->
+            <div class="command-category" data-category="music">
+                <h2 class="category-title">🎵 Music Commands</h2>
+                <div class="commands-grid">
+                    <div class="command-card" data-command="autoplay">
+                        <div class="command-header">
+                            <code class="command-name">+autoplay</code>
+                            <button class="copy-btn" data-copy="+autoplay">📋</button>
+                        </div>
+                        <p class="command-desc">Toggle autoplay mode to keep music playing</p>
+                        <p class="command-usage">Usage: <code>+autoplay</code></p>
+                    </div>
+                    <div class="command-card" data-command="clear">
+                        <div class="command-header">
+                            <code class="command-name">+clear</code>
+                            <button class="copy-btn" data-copy="+clear">📋</button>
+                        </div>
+                        <p class="command-desc">Clear the entire music queue</p>
+                        <p class="command-usage">Usage: <code>+clear</code></p>
+                    </div>
+                    <div class="command-card" data-command="grab">
+                        <div class="command-header">
+                            <code class="command-name">+grab</code>
+                            <button class="copy-btn" data-copy="+grab">📋</button>
+                        </div>
+                        <p class="command-desc">Save the current song to your DMs</p>
+                        <p class="command-usage">Usage: <code>+grab</code></p>
+                    </div>
+                    <div class="command-card" data-command="join">
+                        <div class="command-header">
+                            <code class="command-name">+join</code>
+                            <button class="copy-btn" data-copy="+join">📋</button>
+                        </div>
+                        <p class="command-desc">Make the bot join your voice channel</p>
+                        <p class="command-usage">Usage: <code>+join</code></p>
+                    </div>
+                    <div class="command-card" data-command="leave">
+                        <div class="command-header">
+                            <code class="command-name">+leave</code>
+                            <button class="copy-btn" data-copy="+leave">📋</button>
+                        </div>
+                        <p class="command-desc">Make the bot leave the voice channel</p>
+                        <p class="command-usage">Usage: <code>+leave</code></p>
+                    </div>
+                    <div class="command-card" data-command="loop">
+                        <div class="command-header">
+                            <code class="command-name">+loop</code>
+                            <button class="copy-btn" data-copy="+loop">📋</button>
+                        </div>
+                        <p class="command-desc">Toggle loop mode for queue or track</p>
+                        <p class="command-usage">Usage: <code>+loop [queue/track]</code></p>
+                    </div>
+                    <div class="command-card" data-command="nowplaying">
+                        <div class="command-header">
+                            <code class="command-name">+nowplaying</code>
+                            <button class="copy-btn" data-copy="+nowplaying">📋</button>
+                        </div>
+                        <p class="command-desc">Show currently playing song information</p>
+                        <p class="command-usage">Usage: <code>+nowplaying</code></p>
+                    </div>
+                    <div class="command-card" data-command="pause">
+                        <div class="command-header">
+                            <code class="command-name">+pause</code>
+                            <button class="copy-btn" data-copy="+pause">📋</button>
+                        </div>
+                        <p class="command-desc">Pause the current song</p>
+                        <p class="command-usage">Usage: <code>+pause</code></p>
+                    </div>
+                    <div class="command-card" data-command="play">
+                        <div class="command-header">
+                            <code class="command-name">+play</code>
+                            <button class="copy-btn" data-copy="+play">📋</button>
+                        </div>
+                        <p class="command-desc">Play a song from YouTube, Spotify, or URL</p>
+                        <p class="command-usage">Usage: <code>+play [song name/url]</code></p>
+                    </div>
+                    <div class="command-card" data-command="previous">
+                        <div class="command-header">
+                            <code class="command-name">+previous</code>
+                            <button class="copy-btn" data-copy="+previous">📋</button>
+                        </div>
+                        <p class="command-desc">Play the previous song in queue</p>
+                        <p class="command-usage">Usage: <code>+previous</code></p>
+                    </div>
+                    <div class="command-card" data-command="queue">
+                        <div class="command-header">
+                            <code class="command-name">+queue</code>
+                            <button class="copy-btn" data-copy="+queue">📋</button>
+                        </div>
+                        <p class="command-desc">Display the music queue</p>
+                        <p class="command-usage">Usage: <code>+queue</code></p>
+                    </div>
+                    <div class="command-card" data-command="radio">
+                        <div class="command-header">
+                            <code class="command-name">+radio</code>
+                            <button class="copy-btn" data-copy="+radio">📋</button>
+                        </div>
+                        <p class="command-desc">Play radio stations</p>
+                        <p class="command-usage">Usage: <code>+radio [station]</code></p>
+                    </div>
+                    <div class="command-card" data-command="rejoin">
+                        <div class="command-header">
+                            <code class="command-name">+rejoin</code>
+                            <button class="copy-btn" data-copy="+rejoin">📋</button>
+                        </div>
+                        <p class="command-desc">Rejoin the voice channel</p>
+                        <p class="command-usage">Usage: <code>+rejoin</code></p>
+                    </div>
+                    <div class="command-card" data-command="remove">
+                        <div class="command-header">
+                            <code class="command-name">+remove</code>
+                            <button class="copy-btn" data-copy="+remove">📋</button>
+                        </div>
+                        <p class="command-desc">Remove a song from the queue</p>
+                        <p class="command-usage">Usage: <code>+remove [position]</code></p>
+                    </div>
+                    <div class="command-card" data-command="resume">
+                        <div class="command-header">
+                            <code class="command-name">+resume</code>
+                            <button class="copy-btn" data-copy="+resume">📋</button>
+                        </div>
+                        <p class="command-desc">Resume the paused song</p>
+                        <p class="command-usage">Usage: <code>+resume</code></p>
+                    </div>
+                    <div class="command-card" data-command="search">
+                        <div class="command-header">
+                            <code class="command-name">+search</code>
+                            <button class="copy-btn" data-copy="+search">📋</button>
+                        </div>
+                        <p class="command-desc">Search for songs and select from results</p>
+                        <p class="command-usage">Usage: <code>+search [song name]</code></p>
+                    </div>
+                    <div class="command-card" data-command="seek">
+                        <div class="command-header">
+                            <code class="command-name">+seek</code>
+                            <button class="copy-btn" data-copy="+seek">📋</button>
+                        </div>
+                        <p class="command-desc">Seek to a specific time in the song</p>
+                        <p class="command-usage">Usage: <code>+seek [time]</code></p>
+                    </div>
+                    <div class="command-card" data-command="shuffle">
+                        <div class="command-header">
+                            <code class="command-name">+shuffle</code>
+                            <button class="copy-btn" data-copy="+shuffle">📋</button>
+                        </div>
+                        <p class="command-desc">Shuffle the queue</p>
+                        <p class="command-usage">Usage: <code>+shuffle</code></p>
+                    </div>
+                    <div class="command-card" data-command="similar">
+                        <div class="command-header">
+                            <code class="command-name">+similar</code>
+                            <button class="copy-btn" data-copy="+similar">📋</button>
+                        </div>
+                        <p class="command-desc">Find similar songs to current track</p>
+                        <p class="command-usage">Usage: <code>+similar</code></p>
+                    </div>
+                    <div class="command-card" data-command="skip">
+                        <div class="command-header">
+                            <code class="command-name">+skip</code>
+                            <button class="copy-btn" data-copy="+skip">📋</button>
+                        </div>
+                        <p class="command-desc">Skip the current song</p>
+                        <p class="command-usage">Usage: <code>+skip</code></p>
+                    </div>
+                    <div class="command-card" data-command="stop">
+                        <div class="command-header">
+                            <code class="command-name">+stop</code>
+                            <button class="copy-btn" data-copy="+stop">📋</button>
+                        </div>
+                        <p class="command-desc">Stop playback and clear queue</p>
+                        <p class="command-usage">Usage: <code>+stop</code></p>
+                    </div>
+                    <div class="command-card" data-command="volume">
+                        <div class="command-header">
+                            <code class="command-name">+volume</code>
+                            <button class="copy-btn" data-copy="+volume">📋</button>
+                        </div>
+                        <p class="command-desc">Adjust playback volume (0-200)</p>
+                        <p class="command-usage">Usage: <code>+volume [0-200]</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Commands -->
+            <div class="command-category" data-category="filters">
+                <h2 class="category-title">🎛️ Filter Commands</h2>
+                <div class="commands-grid">
+                    <div class="command-card" data-command="8d">
+                        <div class="command-header">
+                            <code class="command-name">+8d</code>
+                            <button class="copy-btn" data-copy="+8d">📋</button>
+                        </div>
+                        <p class="command-desc">Apply 8D audio effect</p>
+                        <p class="command-usage">Usage: <code>+8d</code></p>
+                    </div>
+                    <div class="command-card" data-command="bassboost">
+                        <div class="command-header">
+                            <code class="command-name">+bassboost</code>
+                            <button class="copy-btn" data-copy="+bassboost">📋</button>
+                        </div>
+                        <p class="command-desc">Boost bass levels</p>
+                        <p class="command-usage">Usage: <code>+bassboost [level]</code></p>
+                    </div>
+                    <div class="command-card" data-command="china">
+                        <div class="command-header">
+                            <code class="command-name">+china</code>
+                            <button class="copy-btn" data-copy="+china">📋</button>
+                        </div>
+                        <p class="command-desc">Apply China audio filter</p>
+                        <p class="command-usage">Usage: <code>+china</code></p>
+                    </div>
+                    <div class="command-card" data-command="chipmunk">
+                        <div class="command-header">
+                            <code class="command-name">+chipmunk</code>
+                            <button class="copy-btn" data-copy="+chipmunk">📋</button>
+                        </div>
+                        <p class="command-desc">Apply high-pitched chipmunk effect</p>
+                        <p class="command-usage">Usage: <code>+chipmunk</code></p>
+                    </div>
+                    <div class="command-card" data-command="clearfilters">
+                        <div class="command-header">
+                            <code class="command-name">+clearfilters</code>
+                            <button class="copy-btn" data-copy="+clearfilters">📋</button>
+                        </div>
+                        <p class="command-desc">Remove all active filters</p>
+                        <p class="command-usage">Usage: <code>+clearfilters</code></p>
+                    </div>
+                    <div class="command-card" data-command="daycore">
+                        <div class="command-header">
+                            <code class="command-name">+daycore</code>
+                            <button class="copy-btn" data-copy="+daycore">📋</button>
+                        </div>
+                        <p class="command-desc">Apply slowed and reverb effect</p>
+                        <p class="command-usage">Usage: <code>+daycore</code></p>
+                    </div>
+                    <div class="command-card" data-command="distortion">
+                        <div class="command-header">
+                            <code class="command-name">+distortion</code>
+                            <button class="copy-btn" data-copy="+distortion">📋</button>
+                        </div>
+                        <p class="command-desc">Add distortion effect</p>
+                        <p class="command-usage">Usage: <code>+distortion</code></p>
+                    </div>
+                    <div class="command-card" data-command="earrape">
+                        <div class="command-header">
+                            <code class="command-name">+earrape</code>
+                            <button class="copy-btn" data-copy="+earrape">📋</button>
+                        </div>
+                        <p class="command-desc">Extreme bass boost effect</p>
+                        <p class="command-usage">Usage: <code>+earrape</code></p>
+                    </div>
+                    <div class="command-card" data-command="enhance">
+                        <div class="command-header">
+                            <code class="command-name">+enhance</code>
+                            <button class="copy-btn" data-copy="+enhance">📋</button>
+                        </div>
+                        <p class="command-desc">Enhance audio quality</p>
+                        <p class="command-usage">Usage: <code>+enhance</code></p>
+                    </div>
+                    <div class="command-card" data-command="equalizer">
+                        <div class="command-header">
+                            <code class="command-name">+equalizer</code>
+                            <button class="copy-btn" data-copy="+equalizer">📋</button>
+                        </div>
+                        <p class="command-desc">Customize audio equalizer</p>
+                        <p class="command-usage">Usage: <code>+equalizer [preset]</code></p>
+                    </div>
+                    <div class="command-card" data-command="karaoke">
+                        <div class="command-header">
+                            <code class="command-name">+karaoke</code>
+                            <button class="copy-btn" data-copy="+karaoke">📋</button>
+                        </div>
+                        <p class="command-desc">Remove vocals for karaoke</p>
+                        <p class="command-usage">Usage: <code>+karaoke</code></p>
+                    </div>
+                    <div class="command-card" data-command="nightcore">
+                        <div class="command-header">
+                            <code class="command-name">+nightcore</code>
+                            <button class="copy-btn" data-copy="+nightcore">📋</button>
+                        </div>
+                        <p class="command-desc">Apply sped up nightcore effect</p>
+                        <p class="command-usage">Usage: <code>+nightcore</code></p>
+                    </div>
+                    <div class="command-card" data-command="optimize">
+                        <div class="command-header">
+                            <code class="command-name">+optimize</code>
+                            <button class="copy-btn" data-copy="+optimize">📋</button>
+                        </div>
+                        <p class="command-desc">Optimize audio quality</p>
+                        <p class="command-usage">Usage: <code>+optimize</code></p>
+                    </div>
+                    <div class="command-card" data-command="pop">
+                        <div class="command-header">
+                            <code class="command-name">+pop</code>
+                            <button class="copy-btn" data-copy="+pop">📋</button>
+                        </div>
+                        <p class="command-desc">Apply pop music EQ preset</p>
+                        <p class="command-usage">Usage: <code>+pop</code></p>
+                    </div>
+                    <div class="command-card" data-command="soft">
+                        <div class="command-header">
+                            <code class="command-name">+soft</code>
+                            <button class="copy-btn" data-copy="+soft">📋</button>
+                        </div>
+                        <p class="command-desc">Apply soft audio filter</p>
+                        <p class="command-usage">Usage: <code>+soft</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Playlist Commands -->
+            <div class="command-category" data-category="playlist">
+                <h2 class="category-title">📋 Playlist Commands</h2>
+                <div class="commands-grid">
+                    <div class="command-card" data-command="pl-add">
+                        <div class="command-header">
+                            <code class="command-name">+pl-add</code>
+                            <button class="copy-btn" data-copy="+pl-add">📋</button>
+                        </div>
+                        <p class="command-desc">Add current song to playlist</p>
+                        <p class="command-usage">Usage: <code>+pl-add [playlist]</code></p>
+                    </div>
+                    <div class="command-card" data-command="pl-create">
+                        <div class="command-header">
+                            <code class="command-name">+pl-create</code>
+                            <button class="copy-btn" data-copy="+pl-create">📋</button>
+                        </div>
+                        <p class="command-desc">Create a new playlist</p>
+                        <p class="command-usage">Usage: <code>+pl-create [name]</code></p>
+                    </div>
+                    <div class="command-card" data-command="pl-delete">
+                        <div class="command-header">
+                            <code class="command-name">+pl-delete</code>
+                            <button class="copy-btn" data-copy="+pl-delete">📋</button>
+                        </div>
+                        <p class="command-desc">Delete a playlist</p>
+                        <p class="command-usage">Usage: <code>+pl-delete [name]</code></p>
+                    </div>
+                    <div class="command-card" data-command="pl-export">
+                        <div class="command-header">
+                            <code class="command-name">+pl-export</code>
+                            <button class="copy-btn" data-copy="+pl-export">📋</button>
+                        </div>
+                        <p class="command-desc">Export playlist to file</p>
+                        <p class="command-usage">Usage: <code>+pl-export [name]</code></p>
+                    </div>
+                    <div class="command-card" data-command="pl-import">
+                        <div class="command-header">
+                            <code class="command-name">+pl-import</code>
+                            <button class="copy-btn" data-copy="+pl-import">📋</button>
+                        </div>
+                        <p class="command-desc">Import playlist from file</p>
+                        <p class="command-usage">Usage: <code>+pl-import [file]</code></p>
+                    </div>
+                    <div class="command-card" data-command="pl-info">
+                        <div class="command-header">
+                            <code class="command-name">+pl-info</code>
+                            <button class="copy-btn" data-copy="+pl-info">📋</button>
+                        </div>
+                        <p class="command-desc">Show playlist information</p>
+                        <p class="command-usage">Usage: <code>+pl-info [name]</code></p>
+                    </div>
+                    <div class="command-card" data-command="pl-list">
+                        <div class="command-header">
+                            <code class="command-name">+pl-list</code>
+                            <button class="copy-btn" data-copy="+pl-list">📋</button>
+                        </div>
+                        <p class="command-desc">List all your playlists</p>
+                        <p class="command-usage">Usage: <code>+pl-list</code></p>
+                    </div>
+                    <div class="command-card" data-command="pl-load">
+                        <div class="command-header">
+                            <code class="command-name">+pl-load</code>
+                            <button class="copy-btn" data-copy="+pl-load">📋</button>
+                        </div>
+                        <p class="command-desc">Load playlist to queue</p>
+                        <p class="command-usage">Usage: <code>+pl-load [name]</code></p>
+                    </div>
+                    <div class="command-card" data-command="pl-profile">
+                        <div class="command-header">
+                            <code class="command-name">+pl-profile</code>
+                            <button class="copy-btn" data-copy="+pl-profile">📋</button>
+                        </div>
+                        <p class="command-desc">View your playlist profile</p>
+                        <p class="command-usage">Usage: <code>+pl-profile</code></p>
+                    </div>
+                    <div class="command-card" data-command="pl-removetrack">
+                        <div class="command-header">
+                            <code class="command-name">+pl-removetrack</code>
+                            <button class="copy-btn" data-copy="+pl-removetrack">📋</button>
+                        </div>
+                        <p class="command-desc">Remove track from playlist</p>
+                        <p class="command-usage">Usage: <code>+pl-removetrack [playlist] [track]</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Config Commands -->
+            <div class="command-category" data-category="config">
+                <h2 class="category-title">⚙️ Config Commands</h2>
+                <div class="commands-grid">
+                    <div class="command-card" data-command="247">
+                        <div class="command-header">
+                            <code class="command-name">+247</code>
+                            <button class="copy-btn" data-copy="+247">📋</button>
+                        </div>
+                        <p class="command-desc">Toggle 24/7 mode (Premium)</p>
+                        <p class="command-usage">Usage: <code>+247</code></p>
+                    </div>
+                    <div class="command-card" data-command="buy">
+                        <div class="command-header">
+                            <code class="command-name">+buy</code>
+                            <button class="copy-btn" data-copy="+buy">📋</button>
+                        </div>
+                        <p class="command-desc">Purchase premium features</p>
+                        <p class="command-usage">Usage: <code>+buy</code></p>
+                    </div>
+                    <div class="command-card" data-command="config">
+                        <div class="command-header">
+                            <code class="command-name">+config</code>
+                            <button class="copy-btn" data-copy="+config">📋</button>
+                        </div>
+                        <p class="command-desc">Configure bot settings</p>
+                        <p class="command-usage">Usage: <code>+config [option]</code></p>
+                    </div>
+                    <div class="command-card" data-command="ignore">
+                        <div class="command-header">
+                            <code class="command-name">+ignore</code>
+                            <button class="copy-btn" data-copy="+ignore">📋</button>
+                        </div>
+                        <p class="command-desc">Ignore channels or users</p>
+                        <p class="command-usage">Usage: <code>+ignore [channel/user]</code></p>
+                    </div>
+                    <div class="command-card" data-command="prefix">
+                        <div class="command-header">
+                            <code class="command-name">+prefix</code>
+                            <button class="copy-btn" data-copy="+prefix">📋</button>
+                        </div>
+                        <p class="command-desc">Change server prefix</p>
+                        <p class="command-usage">Usage: <code>+prefix [new prefix]</code></p>
+                    </div>
+                    <div class="command-card" data-command="premium">
+                        <div class="command-header">
+                            <code class="command-name">+premium</code>
+                            <button class="copy-btn" data-copy="+premium">📋</button>
+                        </div>
+                        <p class="command-desc">Check premium status</p>
+                        <p class="command-usage">Usage: <code>+premium</code></p>
+                    </div>
+                    <div class="command-card" data-command="profile">
+                        <div class="command-header">
+                            <code class="command-name">+profile</code>
+                            <button class="copy-btn" data-copy="+profile">📋</button>
+                        </div>
+                        <p class="command-desc">View your user profile</p>
+                        <p class="command-usage">Usage: <code>+profile</code></p>
+                    </div>
+                    <div class="command-card" data-command="redeem">
+                        <div class="command-header">
+                            <code class="command-name">+redeem</code>
+                            <button class="copy-btn" data-copy="+redeem">📋</button>
+                        </div>
+                        <p class="command-desc">Redeem a premium code</p>
+                        <p class="command-usage">Usage: <code>+redeem [code]</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fun Commands -->
+            <div class="command-category" data-category="fun">
+                <h2 class="category-title">🎉 Fun Commands</h2>
+                <div class="commands-grid">
+                    <div class="command-card" data-command="adance">
+                        <div class="command-header">
+                            <code class="command-name">+adance</code>
+                            <button class="copy-btn" data-copy="+adance">📋</button>
+                        </div>
+                        <p class="command-desc">Anime dance GIF</p>
+                        <p class="command-usage">Usage: <code>+adance</code></p>
+                    </div>
+                    <div class="command-card" data-command="blush">
+                        <div class="command-header">
+                            <code class="command-name">+blush</code>
+                            <button class="copy-btn" data-copy="+blush">📋</button>
+                        </div>
+                        <p class="command-desc">Blush at someone</p>
+                        <p class="command-usage">Usage: <code>+blush [@user]</code></p>
+                    </div>
+                    <div class="command-card" data-command="bonk">
+                        <div class="command-header">
+                            <code class="command-name">+bonk</code>
+                            <button class="copy-btn" data-copy="+bonk">📋</button>
+                        </div>
+                        <p class="command-desc">Bonk someone</p>
+                        <p class="command-usage">Usage: <code>+bonk [@user]</code></p>
+                    </div>
+                    <div class="command-card" data-command="catsay">
+                        <div class="command-header">
+                            <code class="command-name">+catsay</code>
+                            <button class="copy-btn" data-copy="+catsay">📋</button>
+                        </div>
+                        <p class="command-desc">Make a cat say something</p>
+                        <p class="command-usage">Usage: <code>+catsay [text]</code></p>
+                    </div>
+                    <div class="command-card" data-command="cry">
+                        <div class="command-header">
+                            <code class="command-name">+cry</code>
+                            <button class="copy-btn" data-copy="+cry">📋</button>
+                        </div>
+                        <p class="command-desc">Cry animation</p>
+                        <p class="command-usage">Usage: <code>+cry</code></p>
+                    </div>
+                    <div class="command-card" data-command="cuddle">
+                        <div class="command-header">
+                            <code class="command-name">+cuddle</code>
+                            <button class="copy-btn" data-copy="+cuddle">📋</button>
+                        </div>
+                        <p class="command-desc">Cuddle someone</p>
+                        <p class="command-usage">Usage: <code>+cuddle [@user]</code></p>
+                    </div>
+                    <div class="command-card" data-command="hug">
+                        <div class="command-header">
+                            <code class="command-name">+hug</code>
+                            <button class="copy-btn" data-copy="+hug">📋</button>
+                        </div>
+                        <p class="command-desc">Hug someone</p>
+                        <p class="command-usage">Usage: <code>+hug [@user]</code></p>
+                    </div>
+                    <div class="command-card" data-command="kick">
+                        <div class="command-header">
+                            <code class="command-name">+kick</code>
+                            <button class="copy-btn" data-copy="+kick">📋</button>
+                        </div>
+                        <p class="command-desc">Kick someone (fun)</p>
+                        <p class="command-usage">Usage: <code>+kick [@user]</code></p>
+                    </div>
+                    <div class="command-card" data-command="kill">
+                        <div class="command-header">
+                            <code class="command-name">+kill</code>
+                            <button class="copy-btn" data-copy="+kill">📋</button>
+                        </div>
+                        <p class="command-desc">Kill someone (fun)</p>
+                        <p class="command-usage">Usage: <code>+kill [@user]</code></p>
+                    </div>
+                    <div class="command-card" data-command="kiss">
+                        <div class="command-header">
+                            <code class="command-name">+kiss</code>
+                            <button class="copy-btn" data-copy="+kiss">📋</button>
+                        </div>
+                        <p class="command-desc">Kiss someone</p>
+                        <p class="command-usage">Usage: <code>+kiss [@user]</code></p>
+                    </div>
+                    <div class="command-card" data-command="pat">
+                        <div class="command-header">
+                            <code class="command-name">+pat</code>
+                            <button class="copy-btn" data-copy="+pat">📋</button>
+                        </div>
+                        <p class="command-desc">Pat someone</p>
+                        <p class="command-usage">Usage: <code>+pat [@user]</code></p>
+                    </div>
+                    <div class="command-card" data-command="punch">
+                        <div class="command-header">
+                            <code class="command-name">+punch</code>
+                            <button class="copy-btn" data-copy="+punch">📋</button>
+                        </div>
+                        <p class="command-desc">Punch someone</p>
+                        <p class="command-usage">Usage: <code>+punch [@user]</code></p>
+                    </div>
+                    <div class="command-card" data-command="roast">
+                        <div class="command-header">
+                            <code class="command-name">+roast</code>
+                            <button class="copy-btn" data-copy="+roast">📋</button>
+                        </div>
+                        <p class="command-desc">Roast someone</p>
+                        <p class="command-usage">Usage: <code>+roast [@user]</code></p>
+                    </div>
+                    <div class="command-card" data-command="shoot">
+                        <div class="command-header">
+                            <code class="command-name">+shoot</code>
+                            <button class="copy-btn" data-copy="+shoot">📋</button>
+                        </div>
+                        <p class="command-desc">Shoot someone (fun)</p>
+                        <p class="command-usage">Usage: <code>+shoot [@user]</code></p>
+                    </div>
+                    <div class="command-card" data-command="slap">
+                        <div class="command-header">
+                            <code class="command-name">+slap</code>
+                            <button class="copy-btn" data-copy="+slap">📋</button>
+                        </div>
+                        <p class="command-desc">Slap someone</p>
+                        <p class="command-usage">Usage: <code>+slap [@user]</code></p>
+                    </div>
+                    <div class="command-card" data-command="wink">
+                        <div class="command-header">
+                            <code class="command-name">+wink</code>
+                            <button class="copy-btn" data-copy="+wink">📋</button>
+                        </div>
+                        <p class="command-desc">Wink at someone</p>
+                        <p class="command-usage">Usage: <code>+wink [@user]</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Information Commands -->
+            <div class="command-category" data-category="info">
+                <h2 class="category-title">ℹ️ Information Commands</h2>
+                <div class="commands-grid">
+                    <div class="command-card" data-command="help">
+                        <div class="command-header">
+                            <code class="command-name">+help</code>
+                            <button class="copy-btn" data-copy="+help">📋</button>
+                        </div>
+                        <p class="command-desc">Show help menu</p>
+                        <p class="command-usage">Usage: <code>+help [command]</code></p>
+                    </div>
+                    <div class="command-card" data-command="invite">
+                        <div class="command-header">
+                            <code class="command-name">+invite</code>
+                            <button class="copy-btn" data-copy="+invite">📋</button>
+                        </div>
+                        <p class="command-desc">Get bot invite link</p>
+                        <p class="command-usage">Usage: <code>+invite</code></p>
+                    </div>
+                    <div class="command-card" data-command="node">
+                        <div class="command-header">
+                            <code class="command-name">+node</code>
+                            <button class="copy-btn" data-copy="+node">📋</button>
+                        </div>
+                        <p class="command-desc">Show node information</p>
+                        <p class="command-usage">Usage: <code>+node</code></p>
+                    </div>
+                    <div class="command-card" data-command="ping">
+                        <div class="command-header">
+                            <code class="command-name">+ping</code>
+                            <button class="copy-btn" data-copy="+ping">📋</button>
+                        </div>
+                        <p class="command-desc">Check bot latency</p>
+                        <p class="command-usage">Usage: <code>+ping</code></p>
+                    </div>
+                    <div class="command-card" data-command="report">
+                        <div class="command-header">
+                            <code class="command-name">+report</code>
+                            <button class="copy-btn" data-copy="+report">📋</button>
+                        </div>
+                        <p class="command-desc">Report a bug</p>
+                        <p class="command-usage">Usage: <code>+report [description]</code></p>
+                    </div>
+                    <div class="command-card" data-command="stats">
+                        <div class="command-header">
+                            <code class="command-name">+stats</code>
+                            <button class="copy-btn" data-copy="+stats">📋</button>
+                        </div>
+                        <p class="command-desc">Show bot statistics</p>
+                        <p class="command-usage">Usage: <code>+stats</code></p>
+                    </div>
+                    <div class="command-card" data-command="support">
+                        <div class="command-header">
+                            <code class="command-name">+support</code>
+                            <button class="copy-btn" data-copy="+support">📋</button>
+                        </div>
+                        <p class="command-desc">Get support server link</p>
+                        <p class="command-usage">Usage: <code>+support</code></p>
+                    </div>
+                    <div class="command-card" data-command="uptime">
+                        <div class="command-header">
+                            <code class="command-name">+uptime</code>
+                            <button class="copy-btn" data-copy="+uptime">📋</button>
+                        </div>
+                        <p class="command-desc">Check bot uptime</p>
+                        <p class="command-usage">Usage: <code>+uptime</code></p>
+                    </div>
+                    <div class="command-card" data-command="vote">
+                        <div class="command-header">
+                            <code class="command-name">+vote</code>
+                            <button class="copy-btn" data-copy="+vote">📋</button>
+                        </div>
+                        <p class="command-desc">Get vote link</p>
+                        <p class="command-usage">Usage: <code>+vote</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spotify Commands -->
+            <div class="command-category" data-category="spotify">
+                <h2 class="category-title">🎧 Spotify Commands</h2>
+                <div class="commands-grid">
+                    <div class="command-card" data-command="spotifylogin">
+                        <div class="command-header">
+                            <code class="command-name">+spotifylogin</code>
+                            <button class="copy-btn" data-copy="+spotifylogin">📋</button>
+                        </div>
+                        <p class="command-desc">Link your Spotify account</p>
+                        <p class="command-usage">Usage: <code>+spotifylogin</code></p>
+                    </div>
+                    <div class="command-card" data-command="unlinkspotify">
+                        <div class="command-header">
+                            <code class="command-name">+unlinkspotify</code>
+                            <button class="copy-btn" data-copy="+unlinkspotify">📋</button>
+                        </div>
+                        <p class="command-desc">Unlink Spotify account</p>
+                        <p class="command-usage">Usage: <code>+unlinkspotify</code></p>
+                    </div>
+                    <div class="command-card" data-command="spotifyplaylists">
+                        <div class="command-header">
+                            <code class="command-name">+spotifyplaylists</code>
+                            <button class="copy-btn" data-copy="+spotifyplaylists">📋</button>
+                        </div>
+                        <p class="command-desc">View your Spotify playlists</p>
+                        <p class="command-usage">Usage: <code>+spotifyplaylists</code></p>
+                    </div>
+                    <div class="command-card" data-command="spotifyprofile">
+                        <div class="command-header">
+                            <code class="command-name">+spotifyprofile</code>
+                            <button class="copy-btn" data-copy="+spotifyprofile">📋</button>
+                        </div>
+                        <p class="command-desc">View Spotify profile</p>
+                        <p class="command-usage">Usage: <code>+spotifyprofile</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="noResults" class="no-results" style="display: none;">
+                <p>No commands found matching your search.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="https://cdn.discordapp.com/attachments/1382989662045474860/1426293467201536052/1000075928-removebg-preview.png" alt="Funky Bot">
+                        <span>Funky Bot</span>
+                    </div>
+                    <p>Your ultimate Discord music companion with premium features and 24/7 uptime.</p>
+                    <p class="copyright">© 2025 Funky Bot<br>Developed by Knox & Deepjyoti</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="commands.html">Commands</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="developers.html">Developers</a></li>
+                        <li><a href="vote.html">Vote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="commands.html">Documentation</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="https://top.gg/bot/1281872745113587752" target="_blank">Status Page</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://discord.gg/DqmJFqdWXy" target="_blank">Discord Server</a></li>
+                        <li><a href="https://top.gg/bot/1281872745113587752" target="_blank">Top.gg Page</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Version 2.0.0 | Made with ❤️ for Discord</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="js/main.js"></script>
+    <script src="js/commands.js"></script>
+</body>
+</html>
