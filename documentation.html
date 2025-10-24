@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete Documentation for Funky Bot - Discord Music Bot">
+    <meta name="keywords" content="Discord bot, music bot, Funky Bot, documentation, guide">
+    <title>Documentation - Funky Bot</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1382989662045474860/1426293467201536052/1000075928-removebg-preview.png">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <img src="https://cdn.discordapp.com/attachments/1382989662045474860/1426293467201536052/1000075928-removebg-preview.png" alt="Funky Bot Logo" class="preloader-logo">
+            <div class="preloader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://cdn.discordapp.com/attachments/1382989662045474860/1426293467201536052/1000075928-removebg-preview.png" alt="Funky Bot">
+                <span>Funky Bot</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="commands.html" class="nav-link">Commands</a></li>
+                <li><a href="features.html" class="nav-link">Features</a></li>
+                <li><a href="support.html" class="nav-link">Support</a></li>
+                <li><a href="developers.html" class="nav-link">Developers</a></li>
+                <li><a href="vote.html" class="nav-link">Vote</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="https://discord.com/oauth2/authorize?client_id=1281872745113587752&permissions=1165626332499793&response_type=code&redirect_uri=https%3A%2F%2Fdiscord.gg%2FDqmJFqdWXy&integration_type=0&scope=bot+applications.commands+guilds.join" class="btn-primary" target="_blank">Add Bot</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Documentation Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>📚 Documentation</h1>
+            <p>Complete guide to using Funky Bot effectively</p>
+        </div>
+    </section>
+
+    <!-- Documentation Content -->
+    <section class="documentation-content">
+        <div class="container">
+            <!-- Getting Started -->
+            <div class="doc-section">
+                <h2>🚀 Getting Started</h2>
+                <div class="doc-card">
+                    <h3>Step 1: Invite Funky Bot</h3>
+                    <p>Click the button below or visit our <a href="invite.html">Invite Page</a> to add Funky Bot to your Discord server.</p>
+                    <a href="https://discord.com/oauth2/authorize?client_id=1281872745113587752&permissions=1165626332499793&response_type=code&redirect_uri=https%3A%2F%2Fdiscord.gg%2FDqmJFqdWXy&integration_type=0&scope=bot+applications.commands+guilds.join" class="btn-gradient" target="_blank">📥 Invite Funky Bot</a>
+                </div>
+
+                <div class="doc-card">
+                    <h3>Step 2: Required Permissions</h3>
+                    <p>Ensure Funky Bot has these permissions for optimal performance:</p>
+                    <ul class="doc-list">
+                        <li>✅ View Channels</li>
+                        <li>✅ Send Messages</li>
+                        <li>✅ Embed Links</li>
+                        <li>✅ Connect to Voice Channels</li>
+                        <li>✅ Speak in Voice Channels</li>
+                        <li>✅ Use Slash Commands</li>
+                    </ul>
+                </div>
+
+                <div class="doc-card">
+                    <h3>Step 3: Basic Usage</h3>
+                    <p>🎵 Join a voice channel and use <code>/play [song name]</code> to start playing music!</p>
+                </div>
+            </div>
+
+            <!-- Command Categories -->
+            <div class="doc-section">
+                <h2>🎛️ Command Categories</h2>
+                
+                <div class="doc-card">
+                    <h3>🎵 Music Playback Commands</h3>
+                    <ul class="doc-list">
+                        <li><code>/play [song]</code> - Play a song or add it to queue</li>
+                        <li><code>/pause</code> - Pause the current track</li>
+                        <li><code>/resume</code> - Resume playback</li>
+                        <li><code>/skip</code> - Skip to the next song</li>
+                        <li><code>/stop</code> - Stop playback and clear queue</li>
+                        <li><code>/nowplaying</code> - Show currently playing song</li>
+                    </ul>
+                </div>
+
+                <div class="doc-card">
+                    <h3>📝 Queue Management</h3>
+                    <ul class="doc-list">
+                        <li><code>/queue</code> - View the current queue</li>
+                        <li><code>/clear</code> - Clear the entire queue</li>
+                        <li><code>/shuffle</code> - Shuffle the queue</li>
+                        <li><code>/remove [position]</code> - Remove a song from queue</li>
+                        <li><code>/move [from] [to]</code> - Move a song in queue</li>
+                    </ul>
+                </div>
+
+                <div class="doc-card">
+                    <h3>🔊 Audio Controls</h3>
+                    <ul class="doc-list">
+                        <li><code>/volume [0-200]</code> - Adjust playback volume</li>
+                        <li><code>/bass [level]</code> - Adjust bass boost</li>
+                        <li><code>/nightcore</code> - Apply nightcore effect</li>
+                        <li><code>/vaporwave</code> - Apply vaporwave effect</li>
+                        <li><code>/8d</code> - Enable 8D audio effect</li>
+                        <li><code>/reset</code> - Reset all audio filters</li>
+                    </ul>
+                </div>
+
+                <div class="doc-card">
+                    <h3>🎧 Playlist Commands</h3>
+                    <ul class="doc-list">
+                        <li><code>/playlist create [name]</code> - Create a new playlist</li>
+                        <li><code>/playlist add [name] [song]</code> - Add song to playlist</li>
+                        <li><code>/playlist load [name]</code> - Load a playlist</li>
+                        <li><code>/playlist delete [name]</code> - Delete a playlist</li>
+                        <li><code>/playlist list</code> - View all your playlists</li>
+                    </ul>
+                </div>
+
+                <div class="doc-card">
+                    <h3>⚙️ Settings & Configuration</h3>
+                    <ul class="doc-list">
+                        <li><code>/settings</code> - View current server settings</li>
+                        <li><code>/prefix [new prefix]</code> - Change bot prefix</li>
+                        <li><code>/247</code> - Toggle 24/7 mode</li>
+                        <li><code>/djrole [role]</code> - Set DJ role for restricted commands</li>
+                        <li><code>/language [lang]</code> - Change bot language</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Features Guide -->
+            <div class="doc-section">
+                <h2>✨ Features Guide</h2>
+                
+                <div class="doc-card">
+                    <h3>🎵 Multi-Platform Support</h3>
+                    <p>Funky Bot supports streaming from:</p>
+                    <ul class="doc-list">
+                        <li>▶️ YouTube - Videos and playlists</li>
+                        <li>🎧 Spotify - Tracks, albums, and playlists</li>
+                        <li>☁️ SoundCloud - Tracks and sets</li>
+                        <li>🍎 Apple Music - Links</li>
+                        <li>📻 Direct URLs - MP3, M4A streams</li>
+                    </ul>
+                    <p><strong>Usage:</strong> Simply use <code>/play</code> with a song name or URL!</p>
+                </div>
+
+                <div class="doc-card">
+                    <h3>⏰ 24/7 Mode</h3>
+                    <p>Keep Funky Bot connected to your voice channel all the time!</p>
+                    <ul class="doc-list">
+                        <li>✅ Bot stays connected even when alone</li>
+                        <li>✅ Automatically reconnects after disconnection</li>
+                        <li>✅ Perfect for music radio channels</li>
+                    </ul>
+                    <p><strong>Enable:</strong> Use <code>/247</code> command (requires DJ role or admin)</p>
+                </div>
+
+                <div class="doc-card">
+                    <h3>🎛️ Advanced Audio Filters</h3>
+                    <p>Customize your listening experience with 15+ audio filters:</p>
+                    <ul class="doc-list">
+                        <li>🎸 Bass Boost - Enhance low frequencies</li>
+                        <li>🎹 Nightcore - Speed up and pitch up</li>
+                        <li>🌊 Vaporwave - Slow down and reverb</li>
+                        <li>🎧 8D Audio - Surround sound effect</li>
+                        <li>🎼 Karaoke - Remove vocals</li>
+                        <li>⚡ And many more!</li>
+                    </ul>
+                </div>
+
+                <div class="doc-card">
+                    <h3>🔄 Auto-Play & Smart Queue</h3>
+                    <ul class="doc-list">
+                        <li>🎵 Auto-play suggests similar songs when queue ends</li>
+                        <li>🔀 Smart shuffle preserves queue diversity</li>
+                        <li>📊 Queue history tracking</li>
+                        <li>💾 Resume from where you left off</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Troubleshooting -->
+            <div class="doc-section">
+                <h2>🔧 Troubleshooting</h2>
+                
+                <div class="doc-card">
+                    <h3>❓ Common Issues</h3>
+                    
+                    <div class="faq-doc">
+                        <h4>🔇 Bot is not playing audio</h4>
+                        <ul class="doc-list">
+                            <li>✓ Ensure bot has permissions to connect and speak</li>
+                            <li>✓ Check if you're in the same voice channel</li>
+                            <li>✓ Try using <code>/stop</code> and <code>/play</code> again</li>
+                            <li>✓ Verify server region compatibility</li>
+                        </ul>
+                    </div>
+
+                    <div class="faq-doc">
+                        <h4>⚠️ Bot disconnects frequently</h4>
+                        <ul class="doc-list">
+                            <li>✓ Enable 24/7 mode with <code>/247</code></li>
+                            <li>✓ Check your server's voice region</li>
+                            <li>✓ Report persistent issues in support server</li>
+                        </ul>
+                    </div>
+
+                    <div class="faq-doc">
+                        <h4>🐌 Slow response or lag</h4>
+                        <ul class="doc-list">
+                            <li>✓ This may be due to high bot usage</li>
+                            <li>✓ Check Discord's server status</li>
+                            <li>✓ Try changing server region</li>
+                        </ul>
+                    </div>
+
+                    <div class="faq-doc">
+                        <h4>❌ Commands not working</h4>
+                        <ul class="doc-list">
+                            <li>✓ Ensure you're using slash commands (<code>/</code>)</li>
+                            <li>✓ Check bot permissions</li>
+                            <li>✓ Verify the command syntax</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Best Practices -->
+            <div class="doc-section">
+                <h2>💡 Best Practices</h2>
+                
+                <div class="doc-card">
+                    <h3>🎯 Optimal Setup</h3>
+                    <ul class="doc-list">
+                        <li>🎭 Set up a dedicated DJ role for music control</li>
+                        <li>🔒 Restrict certain commands to specific roles</li>
+                        <li>📢 Create a dedicated music channel</li>
+                        <li>⏰ Use 24/7 mode for radio-style servers</li>
+                        <li>📊 Regularly check bot status and updates</li>
+                    </ul>
+                </div>
+
+                <div class="doc-card">
+                    <h3>⚡ Performance Tips</h3>
+                    <ul class="doc-list">
+                        <li>🎵 Use direct song URLs for faster playback</li>
+                        <li>📝 Create playlists for frequently played songs</li>
+                        <li>🔊 Keep volume between 50-100 for best quality</li>
+                        <li>🎛️ Avoid using too many filters simultaneously</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Support -->
+            <div class="doc-section">
+                <h2>💬 Need More Help?</h2>
+                
+                <div class="doc-card">
+                    <div class="support-grid">
+                        <a href="commands.html" class="support-link">
+                            <div class="support-icon">📋</div>
+                            <h4>Full Command List</h4>
+                            <p>View all available commands</p>
+                        </a>
+                        
+                        <a href="support.html" class="support-link">
+                            <div class="support-icon">❓</div>
+                            <h4>Support Page</h4>
+                            <p>FAQs and contact forms</p>
+                        </a>
+                        
+                        <a href="https://discord.gg/DqmJFqdWXy" class="support-link" target="_blank">
+                            <div class="support-icon">💬</div>
+                            <h4>Discord Server</h4>
+                            <p>Get real-time assistance</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="https://cdn.discordapp.com/attachments/1382989662045474860/1426293467201536052/1000075928-removebg-preview.png" alt="Funky Bot">
+                        <span>Funky Bot</span>
+                    </div>
+                    <p>Your ultimate Discord music companion with premium features and 24/7 uptime.</p>
+                    <p class="copyright">© 2025 Funky Bot<br>Developed by Knox & Deepjyoti</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="commands.html">Commands</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="developers.html">Developers</a></li>
+                        <li><a href="vote.html">Vote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="https://top.gg/bot/1281872745113587752" target="_blank">Status Page</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://discord.gg/DqmJFqdWXy" target="_blank">Discord Server</a></li>
+                        <li><a href="https://top.gg/bot/1281872745113587752" target="_blank">Top.gg Page</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Version 2.0.0 | Made with ❤️ for Discord</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
